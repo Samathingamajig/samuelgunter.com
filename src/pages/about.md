@@ -3,34 +3,32 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+- High School Senior at Weiss High School
+- Co-founder & Vice President of the Weiss High School Coding Club
+- Interned twice at [Atlassian](https://www.atlassian.com/), and returning summer of 2023 for another internship
+- Accepted at [UT Austin](https://www.utexas.edu/) for Computer Science
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+## Experience
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+### Atlassian
 
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
+#### Software Engineering Intern, Summer 2022
 
-## Tech Stack
+- Worked on Questions for Confluence, a QnA plugin for Confluence, migrating how certain data is stored
+- Participated in daily standups, used Jira to manage the roadmap, (git) Bitbucket for version control, Slack for communication, and Loom for recording demos
+- Presented project progress weekly with the (20+ coworkers) Confluence Ecosystem team, and to the entire Confluence team (130+ coworkers) and Atlassian as a whole at the end
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+#### Software Engineering Intern, Summer 2021
 
-## Features
+- Wrote a Chrome extension with TypeScript and React to interface with an Atlassian product (Halp) from any site
+- Worked on a team of 5 (3 devs), using Jira to manage our roadmap, (git) Bitbucket for version control, Slack for communication, and Loom for recording demos
+- Presented project progress weekly with the larger (30+ coworkers) Halp team, and to Atlassian as a whole at the end
 
-Here are certain features of this site.
+### Code2College
 
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
+#### Student, Fall 2019 - Current
 
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+- Participated as a student in programming courses to develop basic and advanced Python, Java, and C++ skills
+- Developed and collaborated on programming projects, working closely with professional software engineers from various tech companies
+
+This website is based on [`satnaing/astro-paper`](https://github.com/satnaing/astro-paper), but will eventually be more customized.
