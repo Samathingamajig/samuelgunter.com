@@ -74,7 +74,7 @@ const ogImage = (text: string) => {
         >
           <p
             style={{
-              fontSize: 72,
+              fontSize: 68,
               fontWeight: "bold",
               maxHeight: "84%",
               overflow: "hidden",
