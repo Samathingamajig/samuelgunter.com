@@ -17,6 +17,9 @@ export const LOGO_IMAGE = {
   height: 46,
 };
 
+export const RESUME_LINK =
+  "https://docs.google.com/document/d/1UF9FiTTjyCFgIuJQNXqJZc_P6-1aJlZqSqscW0KQ2yw/edit?usp=sharing";
+
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
@@ -40,6 +43,12 @@ export const SOCIALS: SocialObjects = [
     name: "Mail",
     href: "mailto:samathingamajig@gmail.com",
     linkTitle: `Send an email to ${SITE.author}`,
+    active: true,
+  },
+  {
+    name: "Resume",
+    href: RESUME_LINK,
+    linkTitle: `View ${SITE.author}'s resume`,
     active: true,
   },
   {
