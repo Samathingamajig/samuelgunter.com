@@ -19,7 +19,22 @@ export default defineConfig({
     }),
     react(),
     sitemap(),
-    mdx(),
+    mdx({
+      remarkPlugins: [
+        remarkToc,
+        [
+          remarkCollapse,
+          {
+            test: "Table of contents",
+          },
+        ],
+      ],
+      shikiConfig: {
+        theme: "one-dark-pro",
+        wrap: true,
+      },
+      extendDefaultPlugins: true,
+    }),
   ],
   markdown: {
     remarkPlugins: [

@@ -17,10 +17,12 @@
   "dependencies": {
     "@astrojs/mdx": "^0.19.0",
     "@astrojs/rss": "^2.3.0",
+    "@radix-ui/react-collapsible": "^1.0.2",
     "@resvg/resvg-js": "^2.4.1",
     "astro": "^2.1.5",
     "fuse.js": "^6.6.2",
     "github-slugger": "^2.0.0",
+    "lucide-react": "^0.171.0",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^8.0.1",
     "satori": "^0.4.3",
