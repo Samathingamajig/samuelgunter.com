@@ -36,7 +36,7 @@ One day in January, I was bored in some class and the thought of the scholarship
 
 Message to my dad:
 
-> i'm working on this scholarship today https://www.amazonfutureengineer.com/scholarships
+> i'm working on this scholarship today &lt;link to scholarship&gt;
 >
 > due tonight, idk what timezone it is. i set up alerts on GoingMerry for this but I never got them. it requires two 1000-word essays and gives 100 winners "a $40,000 scholarship ($10,000/year) towards an undergraduate degree in engineering or computer science and a guaranteed summer internship at Amazon!"
 
