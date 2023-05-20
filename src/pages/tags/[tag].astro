@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 
   const tags = getUniqueTags(posts);
 
-  return tags.map(tag => {
+  return tags.map((tag) => {
     return {
       params: { tag },
       props: { tag },
@@ -43,8 +43,12 @@ const tagPosts = getPostsByTag(posts, tag);
   >
     <ul>
       {
-        tagPosts.map(({ data }) => (
-          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+        tagPosts.map(({ data, body }) => (
+          <Card
+            href={`/posts/${slugify(data)}`}
+            frontmatter={data}
+            body={body}
+          />
         ))
       }
     </ul>

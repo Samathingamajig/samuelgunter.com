@@ -47,11 +47,12 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
           <section id="featured">
             <h2>Featured</h2>
             <ul>
-              {featuredPosts.map(({ data }) => (
+              {featuredPosts.map(({ data, body }) => (
                 <Card
                   href={`/posts/${slugify(data)}`}
                   frontmatter={data}
                   secHeading={false}
+                  body={body}
                 />
               ))}
             </ul>
@@ -66,12 +67,13 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
       <ul>
         {
           sortedPosts.map(
-            ({ data }, index) =>
+            ({ data, body }, index) =>
               index < 4 && (
                 <Card
                   href={`/posts/${slugify(data)}`}
                   frontmatter={data}
                   secHeading={false}
+                  body={body}
                 />
               )
           )
