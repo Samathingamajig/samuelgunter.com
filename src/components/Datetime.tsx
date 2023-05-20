@@ -2,9 +2,15 @@ export interface Props {
   datetime: string | Date;
   size?: "sm" | "lg";
   className?: string;
+  includeTime: boolean;
 }
 
-export default function Datetime({ datetime, size = "sm", className }: Props) {
+export default function Datetime({
+  datetime,
+  size = "sm",
+  className,
+  includeTime = true,
+}: Props) {
   return (
     <div className={`flex items-center space-x-2 opacity-80 ${className}`}>
       <svg
@@ -19,13 +25,16 @@ export default function Datetime({ datetime, size = "sm", className }: Props) {
       </svg>
       <span className="sr-only">Posted on:</span>
       <span className={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
-        <FormattedDatetime datetime={datetime} />
+        <FormattedDatetime datetime={datetime} includeTime={includeTime} />
       </span>
     </div>
   );
 }
 
-const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
+const FormattedDatetime = ({
+  datetime,
+  includeTime,
+}: Pick<Props, "datetime" | "includeTime">) => {
   const myDatetime = new Date(datetime);
 
   const date = myDatetime.toLocaleDateString([], {
@@ -44,12 +53,16 @@ const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
   return (
     <>
       {date}
-      <span aria-hidden="true"> | </span>
-      <span className="sr-only">&nbsp;at&nbsp;</span>
-      {time}
-      <span aria-hidden="true">, </span>
-      <span className="sr-only">&nbsp;in&nbsp;</span>
-      US/Central
+      {includeTime ? (
+        <>
+          <span aria-hidden="true"> | </span>
+          <span className="sr-only">&nbsp;at&nbsp;</span>
+          {time}
+          <span aria-hidden="true">, </span>
+          <span className="sr-only">&nbsp;in&nbsp;</span>
+          US/Central
+        </>
+      ) : null}
     </>
   );
 };

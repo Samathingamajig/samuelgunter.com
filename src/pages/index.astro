@@ -8,6 +8,7 @@ import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
+import ProjectCard from "@components/ProjectCard";
 
 const posts = await getCollection("blog");
 
@@ -61,6 +62,27 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
         </>
       )
     }
+
+    <section id="featured-projects">
+      <h2>Featured Projects</h2>
+      <ul>
+        <ProjectCard
+          href="https://github.com/Samathingamajig/ap-score-hider"
+          title="AP Score Hider"
+          description={`Normally when you go to check your AP Exam scores, you see all the scores at once. Since I'm often bored, I decided to solve this problem. With this script, you can make it so all your scores are hidden until you click "Your score" on each test. Since I was still bored after implementing this, I added confetti that explodes if you get a passing score (3+), with more the higher your score is.`}
+          pubDatetime={new Date("Jul 20, 2021")}
+          secHeading={false}
+        />
+        <ProjectCard
+          href="https://github.com/Samathingamajig/Twiscord-lite"
+          title="Twiscord Lite"
+          description={`Twiscord syncs your Twitch channel's chat with a Discord channel's chat, both ways. This is simple to do unidirectional with webhooks, but for bidirectional this is a challenge.`}
+          pubDatetime={new Date("Sep 24, 2020")}
+        />
+      </ul>
+    </section>
+
+    <Hr />
 
     <section id="recent-posts">
       <h2>Recent Posts</h2>
@@ -121,10 +143,12 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
   /* ===== Featured & Recent Posts Sections ===== */
   #featured,
+  #featured-projects,
   #recent-posts {
     @apply pb-6 pt-12;
   }
   #featured h2,
+  #featured-projects h2,
   #recent-posts h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
