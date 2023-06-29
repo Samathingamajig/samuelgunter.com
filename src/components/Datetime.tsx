@@ -2,7 +2,7 @@ export interface Props {
   datetime: string | Date;
   size?: "sm" | "lg";
   className?: string;
-  includeTime: boolean;
+  includeTime?: boolean;
 }
 
 export default function Datetime({
